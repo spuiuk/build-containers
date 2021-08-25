@@ -1,8 +1,9 @@
 FROM	fedora:latest
-ENV	REFRESHED_AT 2021-08-01-1
+ENV	REFRESHED_AT 2021-08-25-1
 
 RUN	dnf update -y
-RUN 	dnf install -y git gdb gcc python36 perl automake autoconf libtool flex bison rpm-build
+RUN 	dnf install -y git gdb gcc python36 perl automake autoconf libtool flex bison	\
+	rpm-build iputils iproute
 
 RUN	dnf install -y openssl-devel libxml2-devel libaio-devel libibverbs-devel	\
 	librdmacm-devel readline-devel glib2-devel libacl-devel sqlite-devel fuse-devel \
